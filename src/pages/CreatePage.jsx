@@ -15,18 +15,8 @@ export default function CreatePage() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    // TODO: Send a POST request to Supabase
-    // await fetch(URL, {
-    //   method: "POST",
-    //   headers,
-    //   body: JSON.stringify({
-    //     image: image.trim(),
-    //     caption: caption.trim(),
-    //   }),
-    // });
-
-    // TODO: Navigate back to the homepage after saving
-    // navigate("/");
+    // TODO: Send en POST request til Supabase med image og caption
+    // TODO: Naviger tilbage til forsiden, når postet er gemt
   }
 
   return (
@@ -36,13 +26,11 @@ export default function CreatePage() {
         <div className="form-grid">
           <div className="form-field">
             <label htmlFor="image">Image URL</label>
-            <input
-              id="image"
-              name="image"
-              placeholder="https://..."
-              required
-            />
-            {/* TODO: Bind the image field to state and show preview */}
+            <input id="image" name="image" placeholder="https://..." required />
+            {/* TODO: Gør image-feltet controlled */}
+            {image && (
+              <img src={image} alt="Preview" className="image-preview" />
+            )}
           </div>
 
           <div className="form-field">
@@ -54,6 +42,7 @@ export default function CreatePage() {
               placeholder="Write a caption for your post..."
               required
             />
+            {/* TODO: Gør caption-feltet controlled */}
           </div>
         </div>
 

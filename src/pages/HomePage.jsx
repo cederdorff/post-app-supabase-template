@@ -12,10 +12,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getPosts() {
-      // TODO: Fetch all posts from Supabase
-      // const response = await fetch(URL, { headers });
-      // const data = await response.json();
-      // setPosts(data);
+      // TODO: Hent alle posts fra Supabase og gem dem i posts state
     }
 
     getPosts();
