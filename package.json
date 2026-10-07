@@ -1,5 +1,6 @@
 {
   "name": "post-app-supabase-template",
+  "base": "/post-app-supabase-template/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
